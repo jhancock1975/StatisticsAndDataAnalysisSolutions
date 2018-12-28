@@ -1,0 +1,16 @@
+# ignore Jupyter notebooks checkpoint files
+*checkpoint*ipynb
+
+# ignore latex intermediate files
+*.aux
+*.out
+*.log
+
+# don't commit the text or different formats of it
+book.*
+
+# don't commit this data file we extracted
+baseball-data.csv
+
+# ignore emacs temporary backup files
+*~

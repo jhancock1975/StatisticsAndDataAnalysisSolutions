@@ -1,0 +1,94 @@
+% tikz in document class for perceptron picture
+\documentclass[12pt, tikz, letterpaper]{article}
+
+\usepackage[utf8]{inputenc} %document endcoding
+\title{Statistics and Data Analysis Exercises 1.2.1}
+\author{John Hancock}
+
+% for picture of perceptron
+\usepackage{tikz}
+\usetikzlibrary{matrix,chains,positioning,decorations.pathreplacing,arrows}
+
+\tikzset{basic/.style={draw,fill=blue!20,text width=1em,text badly centered}}
+\tikzset{input/.style={basic,circle}}
+\tikzset{weights/.style={basic,rectangle}}
+\tikzset{functions/.style={basic,circle,fill=blue!10}}
+
+% for note under figures
+\usepackage[capposition=top]{floatrow}
+
+
+% for block quote
+\usepackage{etoolbox}
+
+% for cases environment
+\usepackage{amsmath}
+
+% for links
+\usepackage{hyperref}
+
+% for source code listings
+\usepackage{listings}
+\lstset
+{ %Formatting for code in appendix
+    language=R,
+    basicstyle=\footnotesize,
+    numbers=left,
+    stepnumber=1,
+    showstringspaces=false,
+    tabsize=1,
+    breaklines=true,
+    breakatwhitespace=false,
+}
+
+% for left-justified only
+%\usepackage[document]{ragged2e}
+% the directive below will indent paragraphs
+% but it messes up the perceptron diagram
+%\setlength{\RaggedRightParindent}{\parindent}
+
+% one inch margins
+%://tex.stackexchange.com/questions/20965/one-inch-margins-and-the-geometry-package
+\setlength\topmargin{0pt}
+\addtolength\topmargin{-\headheight}
+\addtolength\topmargin{-\headsep}
+\setlength\oddsidemargin{0pt}
+\setlength\textwidth{\paperwidth}
+\addtolength\textwidth{-2in}
+\setlength\textheight{\paperheight}
+\addtolength\textheight{-2in}
+
+\setlength{\parindent}{10ex} % Default is 15pt.
+
+\usepackage{setspace}
+\doublespacing
+
+% for keeping tables in line with text
+\usepackage{float}
+\restylefloat{table}
+
+\begin{document}
+\maketitle
+%\RaggedRight
+\section*{Introduction}
+
+This document holds some solutions, and references we used in determining the answers to the questions in
+\cite{statsAndData}, exercises in section 1.2.1 of the same book.
+
+\section{Exercise 1}
+\subsection{Part2} we use \cite{stackHistogram} to generate the histogram in the ipython notebook.
+
+% we format references according to:
+% https://ieee-dataport.org/sites/default/files/analysis/27/IEEE%20Citation%20Guidelines.pdf
+\begin{thebibliography}{99}
+
+
+\bibitem{statsAndData} A.Abebe, J. Daniels, and J. W. McKean, Statistics and Data Analysis,
+  2nd ed. Western Michigan University,Kalamzoo, MI: Statistical Computation Lab (SCL), 2001. [E-book] Available:
+  \url{http://www.stat.wmich.edu/s160/hcopy/book.pdf}.
+
+\bibitem{stackHistogram} StackOverflow user Alexander, August 2017. Available: StackOverflow, https://stackoverflow.com/posts/31029857/revisions . [Accessed December 27, 2018].
+\end{thebibliography}
+
+
+\end{document}
