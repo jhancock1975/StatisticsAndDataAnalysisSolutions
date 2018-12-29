@@ -14,3 +14,6 @@ baseball-data.csv
 
 # ignore emacs temporary backup files
 *~
+
+# ignore Jupyter notebook to LaTeX intermediate output files
+output*png
